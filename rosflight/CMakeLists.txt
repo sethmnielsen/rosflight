@@ -5,7 +5,8 @@ set(CMAKE_BUILD_TYPE Release)
 
 message("CMAKE_C_FLAGS_RELEASE is ${CMAKE_C_FLAGS_RELEASE}")
 
-set(CMAKE_CXX_FLAGS "-std=c++0x")
+set(CMAKE_CXX_FLAGS "-std=c++0x -O2 -DNDEBUG")
+set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
