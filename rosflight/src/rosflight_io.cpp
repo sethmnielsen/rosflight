@@ -413,7 +413,7 @@ void rosflightIO::handle_attitude_quaternion_msg(const mavlink_message_t &msg)
   }
   if (euler_pub_.getTopic().empty())
   {
-    euler_pub_ = nh_.advertise<geometry_msgs::Vector3Stamped>("attitude/euler", 1);
+    euler_pub_ = nh_.advertise<geometry_msgs::Vector3Stamped>("attitude_euler", 1);
   }
   attitude_pub_.publish(attitude_msg);
   euler_pub_.publish(euler_msg);
