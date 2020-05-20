@@ -346,7 +346,7 @@ void rosflightIO::handle_command_ack_msg(const mavlink_message_t &msg)
   {
     ROS_DEBUG("MAVLink command %d Acknowledged", ack.command);
   }
-  else
+  else if (ack.command != 10)
   {
     ROS_ERROR("MAVLink command %d Failed", ack.command);
   }
