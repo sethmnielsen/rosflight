@@ -77,7 +77,7 @@ public:
    * @brief set_refence_magnetic_field_strength
    * @param reference_magnetic_field
    */
-  bool mag_callback(const sensor_msgs::MagneticField::ConstPtr &mag);
+  void mag_callback(const sensor_msgs::MagneticField::ConstPtr &mag);
 
   void set_reference_magnetic_field_strength(double reference_magnetic_field);
 

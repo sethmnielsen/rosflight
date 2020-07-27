@@ -156,7 +156,7 @@ void CalibrateMag::do_mag_calibration()
   magCal(u, A_, b_);
 }
 
-bool CalibrateMag::mag_callback(const sensor_msgs::MagneticField::ConstPtr &mag)
+void CalibrateMag::mag_callback(const sensor_msgs::MagneticField::ConstPtr &mag)
 {
   if (calibrating_)
   {
